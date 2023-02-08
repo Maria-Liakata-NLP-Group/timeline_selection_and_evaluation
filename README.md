@@ -11,7 +11,7 @@ Datasets and pickles that are referenced by the code here are stored in the dire
 1. Clone the git repo:
 
 ```bash
-$ git clone git@github.com:Maria-Liakata-NLP-Group/creation_and_evaluation_of_timelines.git
+$ git clone git@github.com:Maria-Liakata-NLP-Group/timeline_selection_and_evaluation.git
 ```
 
 2. Create a conda environment:
