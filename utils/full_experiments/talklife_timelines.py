@@ -4,29 +4,33 @@ import numpy as np
 import pandas as pd
 
 sys.path.insert(0, "../../")  # Adds higher directory to python modules path
-from utils.evaluate.all_4_subplots_experiment import \
-    full_experiment_all_4_subplots
+from utils.evaluate.all_4_subplots_experiment import full_experiment_all_4_subplots
+
 # Medoid evaluation
 from utils.evaluate.create_centroids import output_all_centroid_styles
 from utils.evaluate.medoid_evaluation import full_experiment
-from utils.evaluate.medoid_evaluation import \
-    full_experiment as medoid_full_experiment
-from utils.evaluate.precision_recall import \
-    experiment_visualize_varying_thresholds
-from utils.evaluate.precision_recall import \
-    experiment_visualize_varying_thresholds as p_r_f1_full_experiment
+from utils.evaluate.medoid_evaluation import full_experiment as medoid_full_experiment
+from utils.evaluate.precision_recall import experiment_visualize_varying_thresholds
+from utils.evaluate.precision_recall import (
+    experiment_visualize_varying_thresholds as p_r_f1_full_experiment,
+)
 from utils.io import data_handler
 from utils.io.my_pickler import my_pickler
-from utils.timeline_generation.anchor_points.keywords.identify_cmocs_from_reddit_timelines import \
-    identify_cmocs_for_reddit_timelines_using_keywords
+from utils.timeline_generation.anchor_points.keywords.identify_cmocs_from_reddit_timelines import (
+    identify_cmocs_for_reddit_timelines_using_keywords,
+)
+
 # 100 random timelines
-from utils.timeline_generation.anchor_points.random_methods import \
-    full_experiment_random_methods
+from utils.timeline_generation.anchor_points.random_methods import (
+    full_experiment_random_methods,
+)
+
 # Identify CMoCs
-from utils.timeline_generation.generate_anchor_points import \
-    create_anchor_points
-from utils.visualize.plot_results import (plot_4_metrics_subplots,
-                                          plot_varying_thresholds)
+from utils.timeline_generation.generate_anchor_points import create_anchor_points
+from utils.visualize.plot_results import (
+    plot_4_metrics_subplots,
+    plot_varying_thresholds,
+)
 
 
 class TalklifeTimelinesExperiments:
@@ -75,6 +79,7 @@ class TalklifeTimelinesExperiments:
             methods_to_remove=["no cps", "keywords_three_categories"],
             tau=tau,
             xlim_upper=xlim_upper,
+            dataset_name='talklife'
         )
 
         return results

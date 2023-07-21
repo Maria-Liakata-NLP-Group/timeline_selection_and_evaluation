@@ -1,10 +1,10 @@
+import os
 import pickle
 import sys
 from glob import glob
-import os
 
 sys.path.insert(
-    0, "../../global_utils/"
+    0, "../../timeline_selection_and_evaluation/"
 )  # Adds higher directory to python modules path
 import global_parameters
 

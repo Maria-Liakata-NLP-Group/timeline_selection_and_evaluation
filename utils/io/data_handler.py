@@ -18,7 +18,7 @@ import torch
 from utils.io import text_vectorizer
 from utils.io.my_pickler import my_pickler
 
-sys.path.insert(0, "../../global_utils/")
+sys.path.insert(0, "../../timeline_selection_and_evaluation/")
 import global_parameters
 
 """

@@ -1,7 +1,8 @@
 import re
-import pandas as pd
-import numpy as np
+
 import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
 
 
 def visualization_styles(
@@ -351,7 +352,7 @@ def plot_single(results, alpha=0.5, grids=True):
 
 
 def plot_4_metrics_subplots(
-    p_r_f1, scaled_medoid_results, savefig=True, dpi=500, fontsize=15, xlim_upper=6
+    p_r_f1, scaled_medoid_results, savefig=True, dpi=500, fontsize=15, xlim_upper=6, dataset_name=''
 ):
     xlim_upper = xlim_upper + 0.2
     plt.rcParams.update({"font.size": fontsize})
@@ -391,10 +392,12 @@ def plot_4_metrics_subplots(
     plt.tight_layout()
 
     if savefig:
-        root_path = "../" * 100
-        save_path = root_path
-        save_path += "home/ahills/LongNLP/timeline_generation/"
-        save_path += "figures/4_metrics_subplots"
+        # root_path = "../" * 100
+        # save_path = root_path
+        # save_path += "home/ahills/LongNLP/timeline_generation/"
+        # save_path += "figures/4_metrics_subplots"
+        save_path='{}_4_metrics_subplots.png'.format(dataset_name)
         plt.savefig(save_path, dpi=dpi)
-        print("Figure saved at `{}`".format(save_path[len(root_path) - 1 :]))
+        # print("Figure saved at `{}`".format(save_path[len(root_path) - 1 :]))
+        print("Figure saved at `{}`".format(save_path))
     plt.show()

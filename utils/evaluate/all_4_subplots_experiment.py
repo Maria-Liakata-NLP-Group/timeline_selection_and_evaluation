@@ -2,8 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from utils.evaluate.medoid_evaluation import full_experiment
-from utils.evaluate.precision_recall import \
-    experiment_visualize_varying_thresholds
+from utils.evaluate.precision_recall import experiment_visualize_varying_thresholds
 from utils.visualize.plot_results import plot_4_metrics_subplots
 
 
@@ -23,6 +22,7 @@ def full_experiment_all_4_subplots(
     create_results=False,
     methods_to_remove=["no cps", "keywords_three_categories"],
     xlim_upper=15,
+    dataset_name=''
 ):
     """
     The main function for this whole project. 
@@ -71,7 +71,8 @@ def full_experiment_all_4_subplots(
     scaled_medoid_results = NormalizeData(medoid_results)
 
     plot_4_metrics_subplots(
-        p_r_f1, scaled_medoid_results, savefig=True, xlim_upper=xlim_upper + 0.2
+        p_r_f1, scaled_medoid_results, savefig=True, xlim_upper=xlim_upper + 0.2,
+        dataset_name=dataset_name
     )
     # plot_4_metrics_subplots(
     #     p_r_f1, scaled_medoid_results, savefig=True, xlim_upper=xlim_upper

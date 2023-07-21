@@ -3,14 +3,11 @@ Creates histories dataframes, for annotated users. Then concatenates this with
 the timelines dataframe. 
 """
 
-import pickle
-import pandas as pd
-
 import sys
+
 sys.path.insert(0, "../../../timeline_generation/")  # Adds higher directory to python modules path
 
 from utils.io import data_handler
-
 
 if __name__ == '__main__':
     TalkLifeDataset = data_handler.TalkLifeDataset(include_embeddings=True, 

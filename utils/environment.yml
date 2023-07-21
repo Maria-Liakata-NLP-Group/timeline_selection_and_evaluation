@@ -1,0 +1,14 @@
+name: py38-MoC
+channels:
+  - defaults
+dependencies:
+  - python=3.8
+  - jupyterlab
+  - tensorboard
+  - nodejs
+  - black
+  - matplotlib
+  - seaborn
+  - plotly
+  - notebook
+  - scikit-learn-extra
