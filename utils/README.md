@@ -1,0 +1,3 @@
+# Introduction
+
+This `utils` folder only contains functions that can be used for the rest of the project, and other functions. Notebooks and exploratory work will call the functions stored here, to build bigger projects. When bugs are spotted, or when functions need expanded functionalities they will be only updated here, and this folder will thus be treated similar to a master branch, which stores the most up to date stable versions of my code.
