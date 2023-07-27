@@ -25,3 +25,7 @@ $ conda env create --file=environment.yml
 ```bash
 $ conda activate lnlp_timeline_select
 ```
+
+# Running Experiments
+
+The results of the paper can be reproduced by either running the `main.py` script, or by running the Jupyter notebook `main.ipynb`.
